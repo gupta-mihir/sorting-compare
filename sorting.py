@@ -1,47 +1,69 @@
 from typing import List
+from urllib.parse import _NetlocResultMixinBytes
 
 
 msg = "This is a sorting program. We will compare all the popular sorting algorithms to see which is the best."
 print(msg)
-print("This is when the sorting program starts")
-class Sort:
+print("This is when the sorting program start")
 
-    def bin_sort(self, nums: List[int]) -> List[int] :
-        #do stuff BINARY SORT
-        print("Binary Sort")
 
-    def bubble(self, nums: List[int]) -> List[int] :
+def bin_sort(self, nums: List[int]) -> List[int] :
+    #do stuff BINARY SORT
+
+    print("Binary Sort")
+
+def bubble(self, nums: List[int]) -> List[int] :
+    #do stuff bubble sort 
+    print("Bubble Sort")
+
+def bucket(self, nums: List[int]) -> List[int] :
         #do stuff bubble sort 
-        print("Bubble Sort")
+    print("Bucket Sort")
 
-    def bucket(self, nums: List[int]) -> List[int] :
-        #do stuff bubble sort 
-        print("Bucket Sort")
-
-    def counting(self, nums: List[int]) -> List[int] :
-        #do stuff bubble sort 
-        print("Counting Sort")
+def counting(self, nums: List[int]) -> List[int] :
+    #do stuff bubble sort 
+    print("Counting Sort")
         
-    def heap(self, nums: List[int]) -> List[int] :
-        #do stuff bubble sort 
-        print("Heap Sort")
+def heap(nums) :
+    #do stuff bubble sort 
+    print("Heap Sort")
 
-    def insertion(self, nums: List[int]) -> List[int] :
-        #do stuff bubble sort 
-        print("Insertion Sort")
+def insertion(nums):
+    #do stuff bubble sort 
+    print("Insertion Sort")
+    for i in range(1, len(nums)):
+        print ("% d" % nums[i])
+    for i in range(1, len(nums)):
+ 
+        key = nums[i]
+ 
+        # Move elements of arr[0..i-1], that are
+        # greater than key, to one position ahead
+        # of their current position
+        j = i-1
+        while j >= 0 and key < nums[j] :
+                nums[j + 1] = nums[j]
+                j -= 1
+        nums[j + 1] = key
+    print("Sorted Array")
+    for i in range(1, len(nums)):
+        print ("% d" % nums[i])
 
-    def merge(self, nums: List[int]) -> List[int] :
-        #do stuff bubble sort 
-        print("Merge Sort")
+def merge(self, nums: List[int]) -> List[int] :
+    #do stuff bubble sort 
+    print("Merge Sort")
 
-    def quick(self, nums: List[int]) -> List[int] :
-        #do stuff bubble sort 
-        print("Quick Sort")
+def quick(self, nums: List[int]) -> List[int] :
+    #do stuff bubble sort 
+    print("Quick Sort")
 
-    def radix(self, nums: List[int]) -> List[int] :
-        #do stuff bubble sort 
-        print("Radix Sort")
+def radix(self, nums: List[int]) -> List[int] :
+    #do stuff bubble sort 
+    print("Radix Sort")
 
-    def selection(self, nums: List[int]) -> List[int] :
-        #do stuff bubble sort 
-        print("Selection Sort")
+def selection(self, nums: List[int]) -> List[int] :
+    #do stuff bubble sort 
+    print("Selection Sort")
+
+arr = [12, 11, 13, 5, 6]
+insertion(arr)
