@@ -12,9 +12,15 @@ def bin_sort(self, nums: List[int]) -> List[int] :
 
     print("Binary Sort")
 
-def bubble(self, nums: List[int]) -> List[int] :
-    #do stuff bubble sort 
+def bubble(nums) :
     print("Bubble Sort")
+    n = len(nums)
+
+    for i in range(n):
+        for j in range(0, n - i - 1):
+            if nums[j] > nums[j+1]:
+                nums[j], nums[j+1] = nums[j+1], nums[j]
+
 
 def bucket(self, nums: List[int]) -> List[int] :
         #do stuff bubble sort 
@@ -49,9 +55,12 @@ def insertion(nums):
     for i in range(1, len(nums)):
         print ("% d" % nums[i])
 
-def merge(self, nums: List[int]) -> List[int] :
+def merge(nums)  :
     #do stuff bubble sort 
     print("Merge Sort")
+
+
+
 
 def quick(self, nums: List[int]) -> List[int] :
     #do stuff bubble sort 
@@ -65,5 +74,13 @@ def selection(self, nums: List[int]) -> List[int] :
     #do stuff bubble sort 
     print("Selection Sort")
 
-arr = [12, 11, 13, 5, 6]
+arr = [64, 34, 25, 12, 22, 11, 90]
+  
+bubble(arr)
+  
+print("Sorted array is:")
+for i in range(len(arr)):
+    print("%d" % arr[i], end=" ")
+print(" \n")
+merge(arr)
 insertion(arr)
